@@ -15,6 +15,7 @@
 		BB9E035326B53D35001C5DB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB9E035126B53D35001C5DB4 /* LaunchScreen.storyboard */; };
 		BB9E035E26B53D35001C5DB4 /* table_viewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9E035D26B53D35001C5DB4 /* table_viewTests.swift */; };
 		BB9E036926B53D36001C5DB4 /* table_viewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9E036826B53D36001C5DB4 /* table_viewUITests.swift */; };
+		BB9E039526B54660001C5DB4 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9E039426B54660001C5DB4 /* BasicViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		BB9E036426B53D36001C5DB4 /* table_viewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = table_viewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB9E036826B53D36001C5DB4 /* table_viewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = table_viewUITests.swift; sourceTree = "<group>"; };
 		BB9E036A26B53D36001C5DB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB9E039426B54660001C5DB4 /* BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				BB9E034626B53D35001C5DB4 /* AppDelegate.swift */,
 				BB9E034826B53D35001C5DB4 /* SceneDelegate.swift */,
+				BB9E039426B54660001C5DB4 /* BasicViewController.swift */,
 				BB9E034A26B53D35001C5DB4 /* ViewController.swift */,
 				BB9E034C26B53D35001C5DB4 /* Main.storyboard */,
 				BB9E034F26B53D35001C5DB4 /* Assets.xcassets */,
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB9E034B26B53D35001C5DB4 /* ViewController.swift in Sources */,
+				BB9E039526B54660001C5DB4 /* BasicViewController.swift in Sources */,
 				BB9E034726B53D35001C5DB4 /* AppDelegate.swift in Sources */,
 				BB9E034926B53D35001C5DB4 /* SceneDelegate.swift in Sources */,
 			);
