@@ -26,6 +26,14 @@ class BasicViewController: UIViewController {
         "London"
     ]
     
+    var restaurantImages = [
+        "cafedeadend", "homei", "teakha", "cafeloisl", "petiteoyster",
+        "forkeerestaurant", "posatelier", "bourkestreetbakery", "haighschocolate",
+        "palominoespresso", "upstate", "traif", "grahamavenuemeats", "wafflewolf",
+        "fiveleaves", "cafelore", "confessional", "barrafina", "donostia", "royaloak",
+        "caskpubkitchen"
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -48,6 +56,9 @@ extension BasicViewController: UITableViewDataSource, UITableViewDelegate {
         basicCell.textLabel?.text = restaurantNames[indexPath.row]
         
         basicCell.detailTextLabel?.text = restaurantLocations[indexPath.row]
+                
+        //UIImage: string type을 image형식으로 변환
+        basicCell.imageView?.image = UIImage(named: restaurantImages[indexPath.row])
         
         return basicCell
     }
