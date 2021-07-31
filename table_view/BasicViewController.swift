@@ -19,6 +19,13 @@ class BasicViewController: UIViewController {
         "Confessional", "Barrafina", "Donostia", "Royal Oak", "CASK Pub and Kitchen"
     ]
     
+    var restaurantLocations = [
+        "Hong Kong", "Hong Kong", "Hong Kong", "Hong Kong", "Hong Kong", "Hong Kong",
+        "Hong Kong", "Sydney", "Sydney", "Sydney", "New York", "New York", "New York",
+        "New York", "New York", "New York", "New York", "London", "London", "London",
+        "London"
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,6 +46,8 @@ extension BasicViewController: UITableViewDataSource, UITableViewDelegate {
         let basicCell = tableView.dequeueReusableCell(withIdentifier: "basicCell", for: indexPath)
         
         basicCell.textLabel?.text = restaurantNames[indexPath.row]
+        
+        basicCell.detailTextLabel?.text = restaurantLocations[indexPath.row]
         
         return basicCell
     }
