@@ -84,6 +84,50 @@ extension CustomTableViewController: UITableViewDataSource, UITableViewDelegate 
     
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let alertVC = UIAlertController(title: restaurantNames[indexPath.row], message: restaurantTypes[indexPath.row], preferredStyle: .actionSheet)
+        
+        let okBtn = UIAlertAction(title: "ok", style: .default, handler: nil)
+        
+        alertVC.addAction(okBtn)
+        
+        present(alertVC, animated: true, completion: nil)
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let shareAction = UIContextualAction(style: .normal, title: "share") { (action, sourceView, completionHandler) in completionHandler(true)
+            
+        }
+        
+        let copyAction = UIContextualAction(style: .normal, title: "copy") { (action, sourceView, completionHandler) in completionHandler(true)
+
+        }
+        
+        shareAction.backgroundColor = .blue
+        shareAction.image = UIImage(systemName: "square.and.arrow.up")
+        
+        copyAction.backgroundColor = .orange
+        copyAction.image = UIImage(systemName: "square.and.pencil")
+        
+        let config = UISwipeActionsConfiguration(actions: [shareAction, copyAction])
+        
+        return config
+    }
+    
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let pinAction = UIContextualAction(style: .normal, title: "pin") { (action, sourceView, completionHander) in completionHander(true)
+            
+        }
+        
+        pinAction.backgroundColor = .systemPurple
+        pinAction.image = UIImage(systemName: "pin")
+        
+        let config = UISwipeActionsConfiguration(actions: [pinAction])
+        
+        return config
+    }
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == 0 {
             return 30
