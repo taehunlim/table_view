@@ -98,10 +98,28 @@ extension CustomTableViewController: UITableViewDataSource, UITableViewDelegate 
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let shareAction = UIContextualAction(style: .normal, title: "share") { (action, sourceView, completionHandler) in completionHandler(true)
             
+            let alertVC = UIAlertController(title: "Share", message: "Do you want to Share?", preferredStyle: .actionSheet)
+            
+            let okBtn = UIAlertAction(title: "ok", style: .default, handler: nil)
+            let cancelBtn = UIAlertAction(title: "cancel", style: .cancel, handler: nil)
+            
+            alertVC.addAction(okBtn)
+            alertVC.addAction(cancelBtn)
+            
+            self.present(alertVC, animated: true, completion: nil)
         }
         
         let copyAction = UIContextualAction(style: .normal, title: "copy") { (action, sourceView, completionHandler) in completionHandler(true)
 
+            let alertVC = UIAlertController(title: "Copy", message: "Do you want to Copy?", preferredStyle: .actionSheet)
+            
+            let okBtn = UIAlertAction(title: "ok", style: .default, handler: nil)
+            let cancelBtn = UIAlertAction(title: "cancel", style: .cancel, handler: nil)
+            
+            alertVC.addAction(okBtn)
+            alertVC.addAction(cancelBtn)
+            
+            self.present(alertVC, animated: true, completion: nil)
         }
         
         shareAction.backgroundColor = .blue
@@ -118,6 +136,15 @@ extension CustomTableViewController: UITableViewDataSource, UITableViewDelegate 
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let pinAction = UIContextualAction(style: .normal, title: "pin") { (action, sourceView, completionHander) in completionHander(true)
             
+            let alertVC = UIAlertController(title: "Pin", message: "Do you want to fix?", preferredStyle: .actionSheet)
+            
+            let okBtn = UIAlertAction(title: "ok", style: .default, handler: nil)
+            let cancelBtn = UIAlertAction(title: "cancel", style: .cancel, handler: nil)
+            
+            alertVC.addAction(okBtn)
+            alertVC.addAction(cancelBtn)
+            
+            self.present(alertVC, animated: true, completion: nil)
         }
         
         pinAction.backgroundColor = .systemPurple
